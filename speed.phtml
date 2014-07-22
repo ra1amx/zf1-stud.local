@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SPEED</title>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    <script type="text/javascript"
+    src="http://code.jquery.com/jquery-latest.js">
+    </script>
+<script> 
+    
+          function sec() setInterval(sec, 50000);</script>    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet"> 
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <style type="text/css"></style>
+        
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <body><div id="infoBox" style="z-index: 360000; font-family: PT Sans, Trebushet MS, sans-serif; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(122, 189, 25,0.9)), to(rgba(102, 167, 16,0.9))); margin-top:-3em; position:fixed; top:3em; left: 0; float: left; width: 100%; color: #fff; padding: 1em; font-size: 11pt; height: 20px; display: none; text-align: left;">Выделите блоки, которые не хотите видеть на этой странице<div id="saveBlocksButton" style="color: #fff; text-shadow: none; cursor: pointer;display: inline;margin-left: 1.6em;padding: 0.5em 0.8em 0.5em 0.8em;background: rgb(102, 167, 16);border-radius: 5px;">Сохранить</div><div id="cancelAddBlocksButton" style="color: #fff; text-shadow: none; cursor: pointer;display: inline;margin-left: 1.6em;padding: 0.5em 0.8em 0.5em 0.8em;background: rgb(102, 167, 16);border-radius: 5px;">Отмена</div></div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://zf1-stud.local">Спутниковый авто трекер</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>ТРЕКЕР в АВТО</h1>
+        <p>Сейчас скорость вашего авто</p>
+        <p><a class="btn btn-primary btn-lg" role="button"> »</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Скорость</h2>
+          <p><?php 
+          
+          echo '<pre>';
+            print_r($this->json_data->entries[0]->speed);
+            // * выводим значение запроса с фильтрацией - только speed;
+          ?> КМ.Ч.
+          </p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Карта</h2>
+          <p></p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Опции</h2>
+          <p></p>
+          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© APRS.FI 2014</p>
+      </footer>
+      
+      
+    </div> <!-- /container -->
